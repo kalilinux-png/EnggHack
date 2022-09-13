@@ -9,8 +9,8 @@ cam = cv2.VideoCapture(0)
 while True:
     result, image = cam.read()
     print("result",result,"image",image)
-    imshow("GeeksForGeeks", image)
-    imwrite("shubh.bmp", image)
+    cv2.imshow("GeeksForGeeks", image)
+    cv2.imwrite("shubh.bmp", image)
     print("Image written to file-system : shubh.bmp")
 
     # Load the model
