@@ -9,7 +9,7 @@ cam = cv2.VideoCapture(0)
 while True:
     result, image = cam.read()
     print("result",result,"image",image)
-    cv2.imshow("GeeksForGeeks", image)
+    cv2.imshow("Say Cheese", image)
     cv2.imwrite("shubh.bmp", image)
     print("Image written to file-system : shubh.bmp")
 
@@ -36,4 +36,4 @@ while True:
 
     # run the inference
     prediction = model.predict(data)
-    print(prediction)
+    print("prediction",prediction)
