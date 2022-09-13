@@ -1,20 +1,23 @@
+import time
 import cv2
 from keras.models import load_model
 from PIL import Image, ImageOps
 import numpy as np
 
 
-cam = cv2.VideoCapture(0)
+cam= cv2.VideoCapture('video.mp4')
+# cam = cv2.VideoCapture(0)
+model = load_model('keras_model.h5')
 
 while True:
     result, image = cam.read()
-    print("result",result,"image",image)
     cv2.imshow("Say Cheese", image)
+    time.sleep(2)
     cv2.imwrite("shubh.bmp", image)
+
     print("Image written to file-system : shubh.bmp")
 
     # Load the model
-    model = load_model('keras_model.h5')
 
     # Create the array of the right shape to feed into the keras model
     # The 'length' or number of images you can put into the array is
