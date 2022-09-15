@@ -5,14 +5,13 @@ from PIL import Image, ImageOps
 import numpy as np
 
 
-cam= cv2.VideoCapture('video.mp4')
+cam= cv2.VideoCapture('video_Trim.mp4') # read 
 # cam = cv2.VideoCapture(0)
 model = load_model('keras_model.h5')
 
 while True:
     result, image = cam.read()
     cv2.imshow("Say Cheese", image)
-    time.sleep(2)
     cv2.imwrite("shubh.bmp", image)
 
     print("Image written to file-system : shubh.bmp")
@@ -39,4 +38,5 @@ while True:
 
     # run the inference
     prediction = model.predict(data)
+    print("prediction",prediction[0][0]*100)
     print("prediction",prediction)
