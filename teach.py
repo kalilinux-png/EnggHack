@@ -5,14 +5,14 @@ from PIL import Image, ImageOps
 import numpy as np
 
 
-cam= cv2.VideoCapture('video_Trim.mp4') # read 
-# cam = cv2.VideoCapture(0)
+# cam= cv2.VideoCapture('video_Trim.mp4') # read 
+cam = cv2.VideoCapture(0)
 model = load_model('keras_model.h5')
 
 while True:
     result, image = cam.read()
     cv2.imshow("Say Cheese", image)
-    cv2.imwrite("shubh.bmp", image)
+    # cv2.imwrite("shubh.bmp", image)
 
     print("Image written to file-system : shubh.bmp")
 
