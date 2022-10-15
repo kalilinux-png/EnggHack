@@ -1,9 +1,8 @@
-
-# Criminal Detection Model: 
+# Criminal Detection Model:
 
 This Project is used to detect/recognise any given criminal/person from given video dataset
 
-# Use Case: 
+# Use Case:
 
 * Lost Person Detection
 * Lost/stolen vehicle detection
@@ -15,3 +14,4 @@ This Project is used to detect/recognise any given criminal/person from given vi
 2. Vikram Singh
 3. Roshni
 4. Shubham Yadav
+5. installing more people ....
