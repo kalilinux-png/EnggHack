@@ -19,4 +19,3 @@ This Project is used to detect/recognise any given criminal/person from given vi
 6. Vikram Singh (scrum master)
 7. Yavnika Malviya (developer)
 8. Yumna Afzal (Project Manager)
-   =============================
