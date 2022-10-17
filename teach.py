@@ -24,18 +24,18 @@ def get_className(classNo):
 		return "sudarshan"
 
 while True:
-	sucess, imgOrignal=cap.read()
+	sucess, imgOrignal=cap.read()	
 	faces = facedetect.detectMultiScale(imgOrignal,1.3,5)
 	for x,y,w,h in faces:
 		crop_img=imgOrignal[y:y+h,x:x+h]
 		img=cv2.resize(crop_img, (224,224))
 		img=img.reshape(1, 224, 224, 3)
 		prediction=model.predict(img)
-		classIndex=model.predict_step(img)
+		classIndex=model.predict_step(img).numpy()[0]
 		print("classIndex",classIndex)
 		if classIndex[0]> classIndex[1]:
 			classIndex=0
-		else:
+		else:	
 			classIndex=1
 		print("class Index",classIndex)
 		probabilityValue=np.amax(prediction)
